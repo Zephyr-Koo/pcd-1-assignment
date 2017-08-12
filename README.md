@@ -68,7 +68,7 @@ This is a combination of 2 approaches above in a single program. The code author
 ## Additional Concepts :heavy_plus_sign:
 
 12. [Clear input buffer](#clear-input-buffer)
-13. [Suppress deprecated function call](#suppress-deprecated-function-call)
+13. [Suppress warning of deprecated function call](#suppress-warning-of-deprecated-function-call)
 14. [Clear screen display / output](#clear-screen-output)
 15. [Reset seed for random number generation](#reset-seed-for-random-number-generation)
 
