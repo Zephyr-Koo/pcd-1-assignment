@@ -24,9 +24,9 @@ Description : Programming Concepts and Design I (Assignment Demo)
 #define SCORE_MULTIPLIER 10
 #define EXCELLENT_SCORE  70
 
-const char CONFIRM_YES = 'Y';
+const char CONFIRM_YES       = 'Y';
 const char INVALID_MESSAGE[] = "\aInvalid selection. Please try again.";
-const char ERROR_MESSAGE[] = "Something went wrong. Please contact system administrator.";
+const char ERROR_MESSAGE[]   = "Something went wrong. Please contact system administrator.";
 
 void displayOperationMenu(int operation);
 void displayLevelMenu(int level);
@@ -57,7 +57,7 @@ void main()
     {
         system("cls");
 
-        menuSelection = operationMenuSelection();
+        menuSelection    = operationMenuSelection();
         currentOperation = menuSelection;
 
         if (isValidOperation(currentOperation))
@@ -67,7 +67,7 @@ void main()
                 system("cls");
 
                 subMenuSelection = levelMenuSelection(currentOperation);
-                currentLevel = subMenuSelection;
+                currentLevel     = subMenuSelection;
 
                 if (isValidLevel(currentLevel))
                 {
@@ -150,17 +150,17 @@ void displayLevelMenu(int level)
 
     switch (level)
     {
-    case LEVEL_BEGINNER:
-        puts("BEGINNER");
-        break;
-    case LEVEL_INTERMEDIATE:
-        puts("INTERMEDIATE");
-        break;
-    case LEVEL_ADVANCED:
-        puts("ADVANCED");
-        break;
-    default:
-        puts(ERROR_MESSAGE);
+        case LEVEL_BEGINNER:
+            puts("BEGINNER");
+            break;
+        case LEVEL_INTERMEDIATE:
+            puts("INTERMEDIATE");
+            break;
+        case LEVEL_ADVANCED:
+            puts("ADVANCED");
+            break;
+        default:
+            puts(ERROR_MESSAGE);
     }
 }
 
@@ -263,35 +263,35 @@ int levelMenuSelection(int operation)
 
 int isValidOperation(int operation)
 {
-    return operation == OPERATION_ADDITION ||
-        operation == OPERATION_SUBTRACTION ||
-        operation == OPERATION_MULTIPLICATION;
+    return operation == OPERATION_ADDITION    ||
+           operation == OPERATION_SUBTRACTION ||
+           operation == OPERATION_MULTIPLICATION;
 }
 
 int isValidLevel(int level)
 {
-    return level == LEVEL_BEGINNER ||
-        level == LEVEL_INTERMEDIATE ||
-        level == LEVEL_ADVANCED;
+    return level == LEVEL_BEGINNER     ||
+           level == LEVEL_INTERMEDIATE ||
+           level == LEVEL_ADVANCED;
 }
 
 int getOperandByLevel(int level)
 {
     return level == LEVEL_BEGINNER ?
-        rand() % 9 + 1 :  // One digit (1 - 9)
-        level == LEVEL_INTERMEDIATE ?
-        rand() % 90 + 10 : // Double digit (10 - 99)
-        rand() % 900 + 100; // Triple digit (100 - 999)
+            rand() % 9   + 1 :  // One digit (1 - 9)
+           level == LEVEL_INTERMEDIATE ?
+            rand() % 90  + 10 : // Double digit (10 - 99)
+            rand() % 900 + 100; // Triple digit (100 - 999)
 }
 
 int getSystemAnswer(int operation, int leftOperand, int rightOperand)
 {
     return operation == OPERATION_ADDITION ?
-        leftOperand + rightOperand :
+            leftOperand + rightOperand :
         operation == OPERATION_SUBTRACTION ?
-        leftOperand - rightOperand :
+            leftOperand - rightOperand :
         operation == OPERATION_MULTIPLICATION ?
-        leftOperand * rightOperand : 0; // 0 (dummy value)
+            leftOperand * rightOperand : 0; // 0 (dummy value)
 }
 
 int runQuizGenerator(int operation, int level)
@@ -303,7 +303,7 @@ int runQuizGenerator(int operation, int level)
         system("cls");
         srand(time(NULL));
 
-        int leftOperand = getOperandByLevel(level),
+        int leftOperand  = getOperandByLevel(level),
             rightOperand = getOperandByLevel(level),
             systemAnswer = getSystemAnswer(operation, leftOperand, rightOperand),
             userAnswer;
