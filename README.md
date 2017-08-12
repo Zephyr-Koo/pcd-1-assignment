@@ -184,7 +184,6 @@ A format specifier can be identifier with a percent '%' prefix. (i.e %c for char
 **Code snippet**:
 
     correctAnswer += randomNumber; // equivalent to correctAnswer = correctAnswer + randomNumber
-    correctAnswer -= randomNumber; // equivalent to correctAnswer = correctAnswer - randomNumber
     correctAnswer *= randomNumber; // equivalent to correctAnswer = correctAnswer * randomNumber
 
 ## Function declaration (no parameter)
@@ -395,7 +394,7 @@ A format specifier can be identifier with a percent '%' prefix. (i.e %c for char
 
 **Line number**:
 
-246 to 250, 255 to 260, 197 (in MathQuizExtra.c)
+246 to 250, 255 to 260 | 197, 212 (in MathQuizExtra.c)
 
 **Code snippet**:
 
