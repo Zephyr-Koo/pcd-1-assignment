@@ -8,7 +8,7 @@
 #include <ctype.h>
 #include <time.h>
 
-#pragma warning(disable: 4996) // required to suppress deprecated function call (e.g. scanf)
+#pragma warning(disable: 4996) // required to suppress warning of deprecated function call (e.g. scanf)
 
 #define OPERATION_ADDITION       1
 #define OPERATION_SUBTRACTION    2
